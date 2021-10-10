@@ -1,3 +1,25 @@
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      bottom:0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  
+  }
+
 body{
     background-color: black;
     color: white;
@@ -7,16 +29,19 @@ body{
 }
 .topnav{
     background-color: rgb(133, 98, 98);
-    overflow: hidden;
+    overflow:hidden;
+    position:fixed;
 
 }
 .topnav a{
     float: left;
     font-size: 20px;
+    display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    
 
 }
 .topnav a:hover{
@@ -25,6 +50,9 @@ body{
 } 
 .topnav a.active{
     background-color: #948272;
+}
+.topnav .icon{
+    display: none;
 }
 #mysongs{
     text-align: center;
@@ -38,7 +66,6 @@ body{
     color: bisque;
     text-align: center;
     background-color: darkcyan;
-    background-image: url('/img/mysongs.jpg');
     background-position: inherit;
     background-size: cover;
 } 
@@ -46,16 +73,19 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-image: url('/img/mysongs.jpg');
+    
 } 
 .start{
-    background-color: red;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: white;
-    width: 150px;
-    height: 20px;
-    overflow: hidden;
-    padding: 14px 16px;
-    margin-left: 200px ;
-       
+    
+    
+    position: relative;   
 }
 .start a{
     text-align: center;
@@ -64,23 +94,35 @@ body{
     color: white;
     justify-content: center;
 }
-.start:hover{
-    background-color: rgb(179, 55, 17);
-}
+
 .container-3{
     text-align: center;
     color: black;
     background-color: white;
     padding: 16px 18px;;
 }
+.button1{
+    background-color: red;
+    font-size: 20px;
+}
+.button1:hover{
+    background-color: orange;
+}
+.button2{
+    background-color: blue;
+    font-size: 20px;
+}
+.button2:hover{
+    background-color: blueviolet;
+}
 .read{
-    background-color: rgb(25, 9, 116);
+    
     color: white;
-    width: 110px;
-    height: 20px;
-    overflow: hidden;
-    padding: 12px 14px;
-    margin-left: 200px ;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
        
 }
 .read a{
@@ -90,9 +132,7 @@ body{
     color: white;
     justify-content: center;
 }
-.read:hover{
-    background-color: rgb(161, 19, 197);
-}
+
 footer{
     align-items: baseline;
     text-align: center;
